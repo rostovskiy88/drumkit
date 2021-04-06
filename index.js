@@ -75,8 +75,14 @@ function makeSound(key) {
 
 function buttonAnimation (currentKey) {
 
-    if (currentKey === makeSound) {
-
+    if ((currentKey === "a") || 
+        (currentKey === "s") || 
+        (currentKey === "d") || 
+        (currentKey === "f") || 
+        (currentKey === "j") ||
+        (currentKey === "k") ||
+        (currentKey === "l")    ){
+    
     var activeButton = document.querySelector("." + currentKey);
 
     activeButton.classList.add("pressed");
@@ -84,5 +90,6 @@ function buttonAnimation (currentKey) {
     setTimeout(function() {
         activeButton.classList.remove("pressed");
     }, 100);
+      
 } 
 }
